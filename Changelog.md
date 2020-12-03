@@ -25,6 +25,8 @@ Breaking Changes:
  * Type System: Support ``address(...).codehash`` to retrieve the codehash of an account.
  * Type System: Unary negation can only be used on signed integers, not on unsigned integers.
  * View Pure Checker: Mark ``chainid`` as view.
+ * Type System: Address-literals and explicit conversions of integer-literals into ``address `` have type ``address`` instead of ``address payable``.
+ * Type System: The global variables ``tx.origin`` and ``msg.sender`` have type ``address`` instead of ``address payable``.
 
 Language Features:
  * Super constructors can now be called using the member notation e.g. ``M.C(123)``.
