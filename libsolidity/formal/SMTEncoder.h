@@ -83,6 +83,8 @@ public:
 	/// @returns the arguments for each base constructor call in the hierarchy of @a _contract.
 	std::map<ContractDefinition const*, std::vector<ASTPointer<frontend::Expression>>> baseArguments(ContractDefinition const& _contract);
 
+	static std::set<FunctionCall const*> collectABICalls(ASTNode const* _node);
+
 protected:
 	// TODO: Check that we do not have concurrent reads and writes to a variable,
 	// because the order of expression evaluation is undefined
@@ -155,6 +157,7 @@ protected:
 	void initFunction(FunctionDefinition const& _function);
 	void visitAssert(FunctionCall const& _funCall);
 	void visitRequire(FunctionCall const& _funCall);
+	void visitABIFunction(FunctionCall const& _funCall);
 	void visitCryptoFunction(FunctionCall const& _funCall);
 	void visitGasLeft(FunctionCall const& _funCall);
 	virtual void visitAddMulMod(FunctionCall const& _funCall);
