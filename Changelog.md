@@ -10,6 +10,7 @@ Compiler Features:
  * Build System: Optionally support dynamic loading of Z3 and use that mechanism for Linux release builds.
  * Code Generator: Avoid memory allocation for default value if it is not used.
  * SMTChecker: Report struct values in counterexamples from CHC engine.
+ * SMTChecker: Support ABI functions as uninterpreted functions.
  * SMTChecker: Support early returns in the CHC engine.
  * SMTChecker: Support getters.
  * SMTChecker: Support named arguments in function calls.
