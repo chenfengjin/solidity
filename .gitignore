@@ -60,3 +60,6 @@ CMakeLists.txt.user
 
 # place to put local temporary files
 tmp
+
+evm
+cmake-build-debug

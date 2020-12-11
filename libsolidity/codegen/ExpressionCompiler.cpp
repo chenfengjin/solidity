@@ -1669,7 +1669,7 @@ void ExpressionCompiler::endVisit(Identifier const& _identifier)
 	}
 	else
 	{
-		solAssert(false, "Identifier type not expected in expression context.");
+		solAssert(false, "Identifier type not expected in expression context: "+declaration->location().text());
 	}
 }
 
